@@ -1,0 +1,13 @@
+pandas==2.3.3
+numpy==2.2.0
+scikit-learn==1.8.0
+imbalanced-learn==0.14.1
+# NLTK 3.9.1: Wird für Tokenisierung, Stopword-Removal und Lemmatisierung verwendet
+nltk==3.9.1
+matplotlib==3.10.0
+# seaborn 0.13.2: Wrapper um matplotlib für statistische Grafiken
+seaborn==0.13.2
+requests==2.32.0
+tabulate==0.10.0
+jupyter==1.1.1
+ipython==8.26.0

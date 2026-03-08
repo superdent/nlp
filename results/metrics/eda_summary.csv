@@ -1,0 +1,5 @@
+category,total_records,text_length_mean,text_length_std,title_length_mean,word_count_mean,rating_1_count,rating_2_count,rating_3_count,rating_4_count,rating_5_count
+Movies and TV,5000,325.7772,655.3386407858013,21.6052,57.6864,363,183,367,760,3327
+All Beauty,5000,382.2552,489.9470621380432,25.953,71.4286,360,276,500,1000,2864
+Office Products,5000,343.7114,476.7255793070402,23.9296,63.494,239,139,333,858,3431
+Books,5000,1061.269,1278.6126815877053,37.6718,177.93,111,214,536,1102,3037
