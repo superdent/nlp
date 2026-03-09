@@ -1,0 +1,2 @@
+Model;Accuracy;Val_Accuracy;Train_Samples;Test_Samples;C;Max_Features;Ngram_Range;Sublinear_TF
+SVM (LinearSVC);0.7244333333333334;0.7103666666666667;140000;30000;1.0;10000;(1, 2);False

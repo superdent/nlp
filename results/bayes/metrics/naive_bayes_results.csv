@@ -1,0 +1,2 @@
+Model;Accuracy;Val_Accuracy;Train_Samples;Test_Samples;Alpha;Max_Features;Ngram_Range;Sublinear_TF;Resampling
+Naive Bayes;0.605875;;;40000;0.01;5000;(1, 1);False;True

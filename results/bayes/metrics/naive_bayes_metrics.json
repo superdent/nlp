@@ -1,0 +1,61 @@
+{
+  "accuracy": 0.605875,
+  "confusion_matrix": [
+    [
+      1790,
+      457,
+      186,
+      96,
+      71
+    ],
+    [
+      526,
+      559,
+      313,
+      128,
+      108
+    ],
+    [
+      522,
+      807,
+      907,
+      483,
+      440
+    ],
+    [
+      448,
+      665,
+      840,
+      1945,
+      2247
+    ],
+    [
+      1359,
+      1326,
+      1120,
+      3623,
+      19034
+    ]
+  ],
+  "num_test_samples": 40000,
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "alpha": 0.01,
+    "max_features": 5000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      1
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false,
+    "use_resampling": true
+  }
+}
