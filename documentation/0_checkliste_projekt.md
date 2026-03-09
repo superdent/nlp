@@ -10,11 +10,9 @@
 ## 2. VORVERARBEITUNG
 - [x] EDA-Report erstellen
 - [x] Split-Script entwickeln (konfigurierbar)
-- [x] Für Naive Bayes: 80/0/20 Split verwenden
-- [ ] Für SVM: 70/15/15 Split verwenden
-- [ ] Für Logistic Regression: 70/15/15 Split verwenden
-- [ ] Für Neural Network: 70/15/15 Split verwenden
-- [ ] Dokumentation
+- [x] Naive Bayes: 80/0/20 Split erstellen
+- [x] SVM, Logistic Regression, Neural Network: 70/15/15 Split verwenden
+- [x] Dokumentation
 
 ## 3. MODELLTRAINING
 
