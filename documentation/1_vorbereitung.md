@@ -7,13 +7,6 @@
 
 ## GitHub Repository
 - Repository aufgesetzt
-- Ordnerstruktur erstellt:
-  - `data/raw/` (Rohdaten)
-  - `data/splits/` (aufgeteilte Datensätze)
-  - `src/` (Python-Scripts)
-  - `notebooks/` (Jupyter Notebooks)
-  - `documentation/` (Dokumentation)
-  - `results/` (Ergebnisse, Modelle, Metriken, Visualisierungen)
 
 ## Datensätze
 - Daten vom McAuley Lab Dataset heruntergeladen
