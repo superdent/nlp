@@ -35,6 +35,9 @@ documentation/         # Dokumentation der Projektphasen
 
 - `documentation/1_vorbereitung.md` – Setup, Repository, Datenbeschaffung
 - `documentation/phase1_eda_report.md` – Explorative Datenanalyse
-- `documentation/2_vorverarbeitung.md` – Datenaufteilung und Splits
+- `documentation/2_vorverarbeitung.md` – EDA, Splits
 - `documentation/modellauswahl.md` – Modellauswahl und Begründung
 - `documentation/3_naive_bayes.md` – Training und Evaluierung Naive Bayes
+- `documentation/3_svm.md` – Training und Evaluierung SVM
+- `documentation/3_logistic_regression.md` – Training und Evaluierung Logistische Regression
+- `documentation/3_neural_network.md` – Training und Evaluierung Neuronales Netz

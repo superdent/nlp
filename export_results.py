@@ -18,8 +18,8 @@ OUTPUT_FILE  = PROJECT_ROOT / "results" / "model_comparison.xlsx"
 MODELS = {
     "Naive Bayes":         PROJECT_ROOT / "results" / "bayes"    / "metrics" / "naive_bayes_results.csv",
     "SVM":                 PROJECT_ROOT / "results" / "svm"      / "metrics" / "svm_results.csv",
-    # "Logistic Regression": PROJECT_ROOT / "results" / "logistic" / "metrics" / "logistic_results.csv",
-    # "Neural Network":      PROJECT_ROOT / "results" / "neural"   / "metrics" / "neural_results.csv",
+    "Logistic Regression": PROJECT_ROOT / "results" / "logistic" / "metrics" / "logistic_results.csv",
+    "Neural Network":      PROJECT_ROOT / "results" / "neural"   / "metrics" / "neural_results.csv",
 }
 
 # ============================================================

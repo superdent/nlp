@@ -27,9 +27,9 @@
 - [x] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
 
 ### Logistic Regression
-- [ ] Notebook implementieren
-- [ ] Modell trainieren
-- [ ] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
+- [x] Notebook implementieren
+- [x] Modell trainieren
+- [x] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
 
 ### Neural Network
 - [ ] Notebook implementieren

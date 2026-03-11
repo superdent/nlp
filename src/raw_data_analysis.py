@@ -222,7 +222,7 @@ if __name__ == "__main__":
 
     report_md = generate_markdown_report(all_data, all_stats, figures_dirname)
 
-    report_path = doc_dir / 'phase1_eda_report.md'
+    report_path = doc_dir / '1_eda_result.md'
     with open(report_path, 'w', encoding='utf-8') as f:
         f.write(report_md)
 
