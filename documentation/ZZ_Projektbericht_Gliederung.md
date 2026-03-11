@@ -4,60 +4,42 @@
 <!-- GitHub-Link zu Code-Repository -->
 <!-- Umfeld/Situation/Aufgabe/Problematik -->
 <!-- Zielsetzung -->
-<!-- Geplantes Vorgehen - warum/wozu? -->
-<!-- Methodische Ansätze/theoretische Grundlagen -->
-<!-- Vorarbeiten (Datenerhebung, Datenanalyse) -->
+<!-- Geplantes Vorgehen -->
 <!-- Überblick über Aufbau des Berichts -->
 
 ## 2. Problemstellung
 <!-- Definition der Problemstellung -->
 
 ## 3. Datengrundlage
-
-### 3.1 Datensatz
 <!-- Ausgewählte Produktkategorien -->
+<!-- Anzahl der Rezensionen -->
+<!-- Verteilung der Bewertungen -->
 
-### 3.2 Datenverteilung
-<!-- Anzahl der Rezensionen im Trainings- und Testsatz -->
-<!-- Verteilung der Bewertungen im Trainings- und Testsatz -->
+## 4. Vorverarbeitung
+<!-- Datenaufteilung (70/15/15 vs. 80/20) -->
+<!-- TF-IDF-Vektorisierung -->
+<!-- Resampling (Naive Bayes) -->
 
-## 4. Modellauswahl
+## 5. Modellauswahl
 <!-- Modellauswahl begründen -->
 <!-- Modelle beschreiben -->
 
-## 5. Durchführung
-<!-- Meilensteine -->
-<!-- Schwierigkeiten im Verlauf -->
-<!-- Alle durchlaufenen Schritte protokollieren -->
-<!-- Zwischenergebnisse festhalten -->
-<!-- Effiziente Ressourcennutzung -->
-<!-- Wie wurde trainiert (Datenaufteilung, Hyperparameter, Training-Prozess) -->
-<!-- Welche Tools/Bibliotheken wurden verwendet -->
-<!-- Numerische Ergebnisse klar darstellen -->
+## 6. Training & Tuning
+### 6.1 Naive Bayes
+### 6.2 SVM
+### 6.3 Logistische Regression
+### 6.4 Neuronales Netz
 
-### 5.1 Naive Bayes
-
-### 5.2 SVM
-
-### 5.3 Logistic Regression
-
-### 5.4 Neural Network
-
-## 6. Modellvergleich
+## 7. Modellvergleich
 <!-- Numerische Ergebnisse vergleichend darstellen -->
-<!-- Zielerreichung: Welches Ergebnis wurde erreicht? Entspricht es dem Ziel? -->
-<!-- Effekte und Veränderungen, die gemessen wurden -->
+<!-- Zielerreichung -->
 
-## 7. Reflexion
+## 8. Reflexion
 <!-- Ergebnisse analysieren -->
 <!-- Schlüsse aus dem Verlauf -->
-<!-- Was kann verbessert werden? -->
-<!-- Reflexion der Vorgehensweise -->
 <!-- Praktische Erfahrungen anhand theoretischer Konzepte -->
-<!-- Reflexion der Leistungen/Termine -->
-<!-- Nachhaltige Verankerung der Erkenntnisse -->
+<!-- Reflexion der Vorgehensweise -->
 
-## 8. Fazit
+## 9. Fazit
 <!-- Abschließender Gesamteindruck -->
-<!-- Schlüsse aus dem Ergebnis und Erkenntnissen der Reflexionen des Hauptteils -->
-<!-- Was folgt daraus für das weitere Studium/persönliche und berufliche Entwicklung -->
+<!-- Was folgt daraus für das weitere Studium/persönliche Entwicklung -->
