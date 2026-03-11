@@ -32,13 +32,21 @@
 - [x] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
 
 ### Neural Network
-- [ ] Notebook implementieren
-- [ ] Modell trainieren
-- [ ] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
+- [x] Notebook implementieren
+- [x] Modell trainieren
+- [x] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
 
-- [ ] Dokumentation Modelltraining
+- [x] Dokumentation Modelltraining
 
-## 4. EVALUIERUNG
+## 4. TUNING / EVALUIERUNG
+
+### Tuning
+- [ ] Naive Bayes tunen
+- [ ] SVM tunen
+- [ ] Logistic Regression tunen
+- [ ] Neural Network tunen
+
+### Evaluierung
 - [ ] Alle Modelle vergleichen (Accuracy, Precision, Recall, F1-Score)
 - [ ] Confusion Matrices visualisieren
 - [ ] Dokumentation
