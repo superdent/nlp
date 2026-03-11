@@ -17,25 +17,11 @@
 
 ## Ergebnisse
 
-| Metrik   | Wert                          |
-|----------|-------------------------------|
-| Accuracy | <!-- TODO: Wert eintragen --> |
+| Metrik   | Wert     |
+|----------|----------|
+| Accuracy | 0.605875 |
 
-### Confusion Matrix
-
-<!-- TODO: Confusion Matrix eintragen -->
-
-### Classification Report
-
-| Klasse  | Precision | Recall | F1-Score | Support |
-|---------|-----------|--------|----------|---------|
-| 1 Star  | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
-| 2 Stars | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
-| 3 Stars | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
-| 4 Stars | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
-| 5 Stars | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
-
-## Gespeicherte Artefakte
+## Artefakte
 
 - Modell: `results/models/naive_bayes_model.pkl`
 - Vektorisierer: `results/models/vectorizer.pkl`

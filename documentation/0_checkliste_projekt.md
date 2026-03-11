@@ -4,15 +4,15 @@
 - [x] GitHub Repository aufsetzen
 - [x] Pythonprojekt anlegen
 - [x] Daten herunterladen
-- [x] 4 Kategorien auswählen (Movies & TV, All Beauty, Office Products, Books)
-- [x] Dokumentation
+- [x] 3+ Kategorien auswählen (Movies & TV, All Beauty, Office Products, Books)
+- [x] Dokumentation Setup
 
 ## 2. VORVERARBEITUNG
 - [x] EDA-Report erstellen
 - [x] Split-Script entwickeln (konfigurierbar)
 - [x] Naive Bayes: 80/0/20 Split erstellen
-- [x] SVM, Logistic Regression, Neural Network: 70/15/15 Split verwenden
-- [x] Dokumentation
+- [x] SVM, Logistic Regression, Neural Network: 70/15/15 Split erstellen
+- [x] Dokumentation Vorverarbeitung
 
 ## 3. MODELLTRAINING
 
@@ -22,9 +22,9 @@
 - [x] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
 
 ### SVM
-- [ ] Notebook implementieren
-- [ ] Modell trainieren
-- [ ] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
+- [x] Notebook implementieren
+- [x] Modell trainieren
+- [x] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
 
 ### Logistic Regression
 - [ ] Notebook implementieren
@@ -36,7 +36,7 @@
 - [ ] Modell trainieren
 - [ ] Evaluierung durchführen (Accuracy, Confusion Matrix, Precision, Recall, F1-Score)
 
-- [ ] Dokumentation
+- [ ] Dokumentation Modelltraining
 
 ## 4. EVALUIERUNG
 - [ ] Alle Modelle vergleichen (Accuracy, Precision, Recall, F1-Score)
@@ -44,5 +44,5 @@
 - [ ] Dokumentation
 
 ## 5. PROJEKTBERICHT
-- [ ] Gliederung erstellen
+- [x] Gliederung erstellen
 - [ ] Bericht schreiben

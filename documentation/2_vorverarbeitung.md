@@ -2,9 +2,9 @@
 
 ## EDA
 
-Der EDA-Report wurde mit `src/raw_data_analysis.py` erstellt und ist unter `documentation/phase1_eda_report.md` abgelegt.
+EDA-Report per `src/raw_data_analysis.py` erstellt: documentation/phase1_eda_report.md
 
-Analysiert wurden je bis zu 5.000.000 Datensätze pro Kategorie:
+Analysiert wurden bis zu 5.000.000 Datensätze je Kategorie:
 
 | Kategorie       | Datensätze | Ø Textlänge (Zeichen) | Ø Wörter |
 |-----------------|------------|----------------------|----------|
@@ -15,14 +15,14 @@ Analysiert wurden je bis zu 5.000.000 Datensätze pro Kategorie:
 
 ## Split-Script
 
-Das Split-Script `src/split.py` ist konfigurierbar über folgende Parameter:
+Split-Script `src/split.py` lässt sich über folgende Parameter konfigurieren:
 
 - `N_RECORDS_PER_FILE`: Anzahl der Datensätze pro Kategorie
 - `SPLIT_RATIOS`: Verhältnis Train / Validation / Test
 - `INPUT_FILES`: Pfade zu den Rohdaten
 - `OUTPUT_DIR`: Ausgabeverzeichnis (`data/splits/`)
 
-Die erzeugten Dateien werden nach dem Schema `{split}_0_{n}_{ratio}.jsonl` benannt, z.B. `train_0_50000_80_0_20.jsonl`.
+Namenskonvetion der Splitdateien: `{split}_0_{n}_{ratio}.jsonl`, z. B. `train_0_50000_80_0_20.jsonl`.
 
 ## Erzeugte Splits
 
@@ -33,19 +33,10 @@ Die erzeugten Dateien werden nach dem Schema `{split}_0_{n}_{ratio}.jsonl` benan
 | Train | 160.000    |
 | Test  | 40.000     |
 
-Dateien:
-- `data/splits/train_0_50000_80_0_20.jsonl`
-- `data/splits/test_0_50000_80_0_20.jsonl`
-
 ### SVM / Logistic Regression / Neural Network: 70/15/15
 
 | Split      | Datensätze |
 |------------|------------|
-| Train      | <!-- TODO: Wert eintragen --> |
-| Validation | <!-- TODO: Wert eintragen --> |
-| Test       | <!-- TODO: Wert eintragen --> |
-
-Dateien:
-- `data/splits/train_0_50000_70_15_15.jsonl`
-- `data/splits/val_0_50000_70_15_15.jsonl`
-- `data/splits/test_0_50000_70_15_15.jsonl`
+| Train      | 140.000    |
+| Validation | 30.000     |
+| Test       | 30.000     |

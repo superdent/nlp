@@ -2,20 +2,33 @@
 
 ## Naive Bayes
 
-Naive Bayes ist ein probabilistisches Klassifikationsverfahren, das auf dem Satz von Bayes basiert und Klassen-Unabhängigkeit der Features voraussetzt. Trotz dieser vereinfachenden Annahme zeigt das Modell bei Textklassifikationsaufgaben mit TF-IDF-Features konsistent gute Ergebnisse und besticht durch sehr kurze Trainingszeiten. Es dient im vorliegenden Projekt als schnelle Baseline.
+Naive Bayes ist ein Klassifikationsalgorithmus, der auf dem Satz von Bayes basiert.
+Der Algorithmus nimmt an, dass die verwendeten Features voneinander unabhängig sind.
+Bei der Sentimentanalyse würde es bedeuten, dass jedes einzelne Wort unabhängig von den anderen vorkommt. Diese Annahme ist in der Realität offensichtlich falsch, weil Wörter ihre Bedeutung erst im Kontext anderer Wörter bekommen.
+Trotz dieser unrealistischen (naiven) Annahme soll Naive Bayes bei Klassifikationsaufgaben mit Dokumenten erstaunlich gut funktionieren.
 
 ## Logistic Regression
 
-Logistic Regression ist ein lineares Klassifikationsverfahren, das die Zugehörigkeit zu einer Klasse über eine Softmax-Funktion modelliert. Es eignet sich gut für hochdimensionale, sparse Feature-Räume wie TF-IDF-Vektoren und liefert interpretierbare Gewichte. Bei Textklassifikation gilt es als starke Baseline mit guter Generalisierung.
-
+Logistische Regression ist ein Klassifikationsverfahren, in dem das Modell für eine Beobachtung die Wahrscheinlichkeit berechnet, zu einer bestimmten Klasse zu gehören.
+Dazu wird eine lineare Kombination der Features berechnet und anschließend durch eine logistische Funktion in einen Wert zwischen 0 und 1 umgewandelt.
+Auf Basis dieser Wahrscheinlichkeit wird entschieden, zu welcher Klasse die Beobachtung gehört.
 ## Support Vector Machine
 
-Support Vector Machines suchen die Hyperebene, die den Margin zwischen den Klassen maximiert. Lineare SVMs (LinearSVC) sind besonders effektiv bei hochdimensionalen Textfeatures und erzielen typischerweise die höchste Genauigkeit unter den klassischen Verfahren. Der Nachteil ist eine höhere Trainingszeit gegenüber Naive Bayes und Logistic Regression.
+Support Vector Machines sind ebenfalls ein Klassifikationsverfahren im überwachten Lernen.
+Das Modell sucht eine Trennlinie (bzw. allgemein eine Trennebene) im Feature-Raum, die die Datenpunkte zweier Klassen voneinander trennt.
+Dabei wird diejenige Trennlinie gewählt, die den größtmöglichen Abstand zu den nächstgelegenen Datenpunkten beider Klassen hat. Diese Punkte heißen Support-Vektoren und bestimmen die Lage der Grenze.
+Wenn die Daten nicht linear trennbar sind, können sie mithilfe des Kernel-Tricks so behandelt werden, als lägen sie in einem höherdimensionalen Raum, in dem eine Trennung möglich ist.
+Nachteil von SVM ist eine höhere Trainingszeit gegenüber Naive Bayes und Logistic Regression.
 
 ## Neuronales Netz
 
-Ein mehrschichtiges Perzeptron (MLPClassifier) kann nicht-lineare Entscheidungsgrenzen lernen und ist damit flexibler als die linearen Verfahren. Bei der vorliegenden Datenmenge und Feature-Dimensionalität ist der Mehraufwand durch längere Trainingszeiten und Hyperparameter-Tuning jedoch hoch, der Genauigkeitsvorteil gegenüber SVM und Logistic Regression erfahrungsgemäß gering.
+Ein neuronales Netz ist ein Modell, das aus mehreren miteinander verbundenen Recheneinheiten besteht.
+Diese Einheiten sind in Schichten organisiert: eine Eingabeschicht, eine oder mehrere versteckte Schichten und eine Ausgabeschicht.
+Jede Einheit berechnet aus den Eingaben einen gewichteten Wert und gibt das Ergebnis über eine Aktivierungsfunktion weiter.
+Während des Trainings werden die Gewichte so angepasst, dass das Modell möglichst gute Vorhersagen für die Trainingsdaten macht.
 
-## k-Nearest Neighbors (verworfen)
-
-kNN klassifiziert Datenpunkte anhand der k nächsten Nachbarn im Feature-Raum. Das Verfahren wurde verworfen, da es kein explizites Modell lernt und die Inferenzkomplexität linear mit der Trainingsdatenmenge wächst (O(n)). Darüber hinaus leidet kNN in hochdimensionalen Räumen unter dem Fluch der Dimensionalität, was bei TF-IDF-Vektoren mit mehreren tausend Dimensionen zu deutlich verschlechterter Performance führt.
+## k-Nearest Neighbors
+k-Nearest Neighbors (kNN) ist ein Lazy Learner.
+Das Modell speichert die Trainingsdaten und berechnet für eine neue Beobachtung den Abstand zu den vorhandenen Datenpunkten.
+Anschließend werden die k nächstgelegenen Nachbarn bestimmt.
+Die neue Beobachtung wird der Klasse zugeordnet, die unter diesen Nachbarn am häufigsten vorkommt.
