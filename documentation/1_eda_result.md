@@ -4,19 +4,20 @@ Amazon-Reviews aus 4 Produktkategorien
 
 ## Übersichtstabelle
 
-| Kategorie       |   Datensätze |   Ø Textlänge |   Ø Wörter |   Bewertung 1 |   Bewertung 5 |
-|:----------------|-------------:|--------------:|-----------:|--------------:|--------------:|
-| Movies & TV     |      5000000 |           264 |         47 |        346285 |       3194129 |
-| All Beauty      |       701528 |           173 |         33 |        102080 |        420726 |
-| Office Products |      5000000 |           183 |         34 |        374968 |       3524641 |
-| Books           |      5000000 |           434 |         77 |        182306 |       3381864 |
+| Kategorie       |   Datensätze (Rohdatei) |   Datensätze (analysiert) |   Ø Textlänge |   Ø Wörter |   Bewertung 1 |   Bewertung 5 |
+|:----------------|------------------------:|--------------------------:|--------------:|-----------:|--------------:|--------------:|
+| Movies & TV     |              17,328,314 |                 5,000,000 |           264 |         47 |        346285 |       3194129 |
+| All Beauty      |                 701,528 |                   701,528 |           173 |         33 |        102080 |        420726 |
+| Office Products |              12,845,712 |                 5,000,000 |           183 |         34 |        374968 |       3524641 |
+| Books           |              29,475,453 |                 5,000,000 |           434 |         77 |        182306 |       3381864 |
 
 ---
 
 ## Movies & TV
 
 ### Statistiken
-- **Gesamtanzahl Datensätze:** 5,000,000
+- **Datensätze in Rohdatei:** 17,328,314
+- **Davon analysiert:** 5,000,000
 - **Fehlende Werte:** title=0, text=0, rating=0
 
 ### Verteilung der Bewertungen
@@ -46,7 +47,8 @@ Amazon-Reviews aus 4 Produktkategorien
 ## All Beauty
 
 ### Statistiken
-- **Gesamtanzahl Datensätze:** 701,528
+- **Datensätze in Rohdatei:** 701,528
+- **Davon analysiert:** 701,528
 - **Fehlende Werte:** title=0, text=0, rating=0
 
 ### Verteilung der Bewertungen
@@ -76,7 +78,8 @@ Amazon-Reviews aus 4 Produktkategorien
 ## Office Products
 
 ### Statistiken
-- **Gesamtanzahl Datensätze:** 5,000,000
+- **Datensätze in Rohdatei:** 12,845,712
+- **Davon analysiert:** 5,000,000
 - **Fehlende Werte:** title=0, text=0, rating=0
 
 ### Verteilung der Bewertungen
@@ -106,7 +109,8 @@ Amazon-Reviews aus 4 Produktkategorien
 ## Books
 
 ### Statistiken
-- **Gesamtanzahl Datensätze:** 5,000,000
+- **Datensätze in Rohdatei:** 29,475,453
+- **Davon analysiert:** 5,000,000
 - **Fehlende Werte:** title=0, text=0, rating=4
 
 ### Verteilung der Bewertungen
@@ -136,7 +140,7 @@ Amazon-Reviews aus 4 Produktkategorien
 ## Zentrale Erkenntnisse
 
 ### Eigenschaften der Kategorien
-- **Größter Datensatz:** Movies & TV (5,000,000 Datensätze)
+- **Größter Datensatz:** Books (29,475,453 Datensätze)
 - **Längste Texte:** Books (Ø 434 Zeichen)
 - **Meiste Wörter:** Books (Ø 77 Wörter)
 

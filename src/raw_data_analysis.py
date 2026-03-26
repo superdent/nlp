@@ -4,19 +4,28 @@ Erzeugt einen Markdown-Report mit PNG-Grafiken in einem Unterordner
 """
 
 import json
+import gc
+from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 
 
+def count_lines(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return sum(1 for _ in f)
+
+
 def load_jsonl_reviews(filepath, max_records=None):
-    """Lädt eine JSONL-Datei und gibt ein DataFrame zurück"""
     records = []
 
     with open(filepath, 'r', encoding='utf-8') as f:
         for i, line in enumerate(f):
             if max_records and i >= max_records:
                 break
+
+            if i > 0 and i % 10_000_000 == 0:
+                print(f"  {i:,} Datensätze gelesen – {datetime.now().strftime('%H:%M:%S')}")
 
             try:
                 record = json.loads(line)
@@ -29,10 +38,11 @@ def load_jsonl_reviews(filepath, max_records=None):
             except json.JSONDecodeError:
                 continue
 
+    print(f"  {len(records):,} Datensätze gelesen – {datetime.now().strftime('%H:%M:%S')}")
     return pd.DataFrame(records)
 
 
-def analyze_category(cat_name, filepath, max_records=5000000):
+def analyze_category(cat_name, filepath, max_records=5_000_000):
     """Analysiert eine Kategorie"""
     print(f"► Analysiere {cat_name}...")
 
@@ -98,7 +108,7 @@ def create_and_save_plots(df, cat_name, figures_dir):
     return rating_filename, textlen_filename
 
 
-def generate_markdown_report(all_data, all_stats, figures_dirname):
+def generate_markdown_report(all_stats, all_plot_files, figures_dirname):
     """Erzeugt einen Markdown-Report mit Links zu PNG-Grafiken"""
     print("► Erzeuge Markdown-Report...")
 
@@ -115,7 +125,8 @@ def generate_markdown_report(all_data, all_stats, figures_dirname):
     for stat in all_stats:
         summary_rows.append({
             'Kategorie': stat['category'],
-            'Datensätze': stat['total_records'],
+            'Datensätze (Rohdatei)': f"{stat['total_records_raw']:,}",
+            'Datensätze (analysiert)': f"{stat['total_records']:,}",
             'Ø Textlänge': f"{stat['text_length_mean']:.0f}",
             'Ø Wörter': f"{stat['word_count_mean']:.0f}",
             'Bewertung 1': stat['rating_1'],
@@ -128,12 +139,16 @@ def generate_markdown_report(all_data, all_stats, figures_dirname):
     md.append("---")
     md.append("")
 
-    for cat_name, (df, stats, rating_file, textlen_file) in all_data.items():
+    for stats in all_stats:
+        cat_name = stats['category']
+        rating_file, textlen_file = all_plot_files[cat_name]
+
         md.append(f"## {cat_name}")
         md.append("")
 
         md.append("### Statistiken")
-        md.append(f"- **Gesamtanzahl Datensätze:** {stats['total_records']:,}")
+        md.append(f"- **Datensätze in Rohdatei:** {stats['total_records_raw']:,}")
+        md.append(f"- **Davon analysiert:** {stats['total_records']:,}")
         md.append(f"- **Fehlende Werte:** title={stats['null_title']}, text={stats['null_text']}, rating={stats['null_rating']}")
         md.append("")
 
@@ -145,8 +160,8 @@ def generate_markdown_report(all_data, all_stats, figures_dirname):
         md.append("")
 
         md.append("### Textlänge (Zeichen)")
-        md.append(f"| Kennzahl | Wert |")
-        md.append(f"|--------|-------|")
+        md.append("| Kennzahl | Wert |")
+        md.append("|--------|-------|")
         md.append(f"| Mittelwert | {stats['text_length_mean']:.0f} |")
         md.append(f"| Standardabweichung | {stats['text_length_std']:.0f} |")
         md.append(f"| Minimum | {stats['text_length_min']:.0f} |")
@@ -169,11 +184,11 @@ def generate_markdown_report(all_data, all_stats, figures_dirname):
     md.append("")
     md.append("### Eigenschaften der Kategorien")
 
-    largest = max(all_stats, key=lambda x: x['total_records'])
+    largest = max(all_stats, key=lambda x: x['total_records_raw'])
     longest_text = max(all_stats, key=lambda x: x['text_length_mean'])
     longest_words = max(all_stats, key=lambda x: x['word_count_mean'])
 
-    md.append(f"- **Größter Datensatz:** {largest['category']} ({largest['total_records']:,} Datensätze)")
+    md.append(f"- **Größter Datensatz:** {largest['category']} ({largest['total_records_raw']:,} Datensätze)")
     md.append(f"- **Längste Texte:** {longest_text['category']} (Ø {longest_text['text_length_mean']:.0f} Zeichen)")
     md.append(f"- **Meiste Wörter:** {longest_words['category']} (Ø {longest_words['word_count_mean']:.0f} Wörter)")
     md.append("")
@@ -209,18 +224,30 @@ if __name__ == "__main__":
     print("EXPLORATIVE DATENANALYSE")
     print("="*60 + "\n")
 
-    all_data = {}
     all_stats = []
+    all_plot_files = {}
+    total_counts = {}
+
+    print("► Zähle Datensätze in Rohdateien...")
+    for cat_name, filepath in categories.items():
+        count = count_lines(filepath)
+        total_counts[cat_name] = count
+        print(f"  {cat_name}: {count:,}")
+    print()
 
     for cat_name, filepath in categories.items():
-        df, stats = analyze_category(cat_name, filepath, max_records=5000000)
-
+        df, stats = analyze_category(cat_name, filepath, max_records=5_000_000)
+        stats['total_records_raw'] = total_counts[cat_name]
         rating_file, textlen_file = create_and_save_plots(df, cat_name, figures_dir)
 
-        all_data[cat_name] = (df, stats, rating_file, textlen_file)
         all_stats.append(stats)
+        all_plot_files[cat_name] = (rating_file, textlen_file)
 
-    report_md = generate_markdown_report(all_data, all_stats, figures_dirname)
+        del df
+        gc.collect()
+        print(f"  Speicher freigegeben für {cat_name}\n")
+
+    report_md = generate_markdown_report(all_stats, all_plot_files, figures_dirname)
 
     report_path = doc_dir / '1_eda_result.md'
     with open(report_path, 'w', encoding='utf-8') as f:
