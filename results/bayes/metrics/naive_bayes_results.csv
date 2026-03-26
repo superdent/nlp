@@ -1,2 +1,2 @@
 Model;Accuracy;Val_Accuracy;Train_Samples;Test_Samples;Hyperparameters
-Naive Bayes;0.605875;;;40000;alpha: 0.01 | max_features: 5000 | min_df: 2 | max_df: 0.95 | ngram_range: (1, 1) | stop_words: english | sublinear_tf: False | resampling: True
+Naive Bayes;0.703975;;;40000;alpha: 0.01 | max_features: 10000 | min_df: 2 | max_df: 0.95 | ngram_range: (1, 2) | stop_words: english | sublinear_tf: False | resampling: False
