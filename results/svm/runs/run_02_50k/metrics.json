@@ -1,0 +1,28 @@
+{
+  "run": "run_02_50k",
+  "accuracy": 0.7217,
+  "num_train_samples": 160000,
+  "num_test_samples": 40000,
+  "train_file": "train_0_50000_80_0_20.jsonl",
+  "test_file": "test_0_50000_80_0_20.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 2000,
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false
+  }
+}

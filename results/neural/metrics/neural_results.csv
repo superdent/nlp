@@ -1,2 +1,0 @@
-Model;Accuracy;Val_Accuracy;Train_Samples;Test_Samples;Hyperparameters
-Neural Network;0.7304;0.7196;140000;30000;hidden_units: 256 | dropout_rate: 0.3 | learning_rate: 0.001 | batch_size: 128 | epochs_trained: 4 | max_features: 10000 | min_df: 2 | max_df: 0.95 | ngram_range: (1, 2) | stop_words: english | sublinear_tf: False

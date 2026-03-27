@@ -1,2 +1,0 @@
-Model;Accuracy;Val_Accuracy;Train_Samples;Test_Samples;Hyperparameters
-SVM (LinearSVC);0.7244333333333334;0.7103666666666667;140000;30000;C: 1.0 | max_iter: 2000 | max_features: 10000 | min_df: 2 | max_df: 0.95 | ngram_range: (1, 2) | stop_words: english | sublinear_tf: False

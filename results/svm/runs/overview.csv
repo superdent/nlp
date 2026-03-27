@@ -1,0 +1,2 @@
+Run;Accuracy;Train_Samples;Test_Samples;Hyperparameters
+run_02_50k;0.7217;160000;40000;C: 1.0 | max_iter: 2000 | max_features: 10000 | min_df: 2 | max_df: 0.95 | ngram_range: (1, 2) | stop_words: english | sublinear_tf: False

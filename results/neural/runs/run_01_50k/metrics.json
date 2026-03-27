@@ -1,46 +1,12 @@
 {
-  "accuracy": 0.7304,
-  "val_accuracy": 0.7196,
-  "confusion_matrix": [
-    [
-      1270,
-      67,
-      207,
-      23,
-      394
-    ],
-    [
-      346,
-      63,
-      346,
-      69,
-      386
-    ],
-    [
-      199,
-      47,
-      743,
-      299,
-      1003
-    ],
-    [
-      63,
-      10,
-      340,
-      786,
-      3472
-    ],
-    [
-      100,
-      2,
-      191,
-      524,
-      19050
-    ]
-  ],
+  "run": "run_01_50k",
+  "accuracy": 0.7314,
   "num_train_samples": 140000,
   "num_val_samples": 30000,
   "num_test_samples": 30000,
+  "train_file": "train_0_50000_70_15_15.jsonl",
+  "val_file": "val_0_50000_70_15_15.jsonl",
+  "test_file": "test_0_50000_70_15_15.jsonl",
   "classes": [
     "1 Star",
     "2 Stars",
