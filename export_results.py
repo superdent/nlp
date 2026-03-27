@@ -1,36 +1,46 @@
 """
 export_results.py
-Liest alle Modell-Ergebnisse ein und schreibt sie in eine gemeinsame Excel-Datei.
+Liest alle Model-Ergebnisse aus overview.csv Dateien ein und schreibt sie in eine gemeinsame Excel-Datei.
 Ablegen im Root des Projekts und von dort ausführen.
 """
 
 from pathlib import Path
 import pandas as pd
+from openpyxl.styles import Alignment
+from openpyxl.utils import get_column_letter
 
-# ============================================================
-# KONFIGURATION
-# ============================================================
-PROJECT_ROOT = Path(".")          # Root des Projekts (Ablageort dieses Scripts)
-OUTPUT_FILE  = PROJECT_ROOT / "results" / "model_comparison.xlsx"
-# ============================================================
+PROJECT_ROOT = Path(".")
+RESULTS_DIR = PROJECT_ROOT / "results"
 
-# Modelle: Name -> Pfad zur CSV
 MODELS = {
-    "Naive Bayes":         PROJECT_ROOT / "results" / "bayes"    / "metrics" / "naive_bayes_results.csv",
-    "SVM":                 PROJECT_ROOT / "results" / "svm"      / "metrics" / "svm_results.csv",
-    "Logistic Regression": PROJECT_ROOT / "results" / "logistic" / "metrics" / "logistic_results.csv",
-    "Neural Network":      PROJECT_ROOT / "results" / "neural"   / "metrics" / "neural_results.csv",
+    "Naive Bayes":         PROJECT_ROOT / "results" / "bayes" / "runs" / "overview.csv",
+    "SVM":                 PROJECT_ROOT / "results" / "svm" / "runs" / "overview.csv",
+    "Logistic Regression": PROJECT_ROOT / "results" / "logistic" / "runs" / "overview.csv",
+    "Neural Network":      PROJECT_ROOT / "results" / "neural" / "runs" / "overview.csv",
 }
 
-# ============================================================
+def get_output_path():
+    existing_files = list(RESULTS_DIR.glob("model_comparison_*.xlsx"))
+
+    if not existing_files:
+        return RESULTS_DIR / "model_comparison_01.xlsx"
+
+    numbers = []
+    for f in existing_files:
+        try:
+            num = int(f.stem.split('_')[-1])
+            numbers.append(num)
+        except (ValueError, IndexError):
+            continue
+
+    next_num = max(numbers) + 1 if numbers else 1
+    return RESULTS_DIR / f"model_comparison_{next_num:02d}.xlsx"
 
 rows = []
 for model_name, path in MODELS.items():
     if path.exists():
-        # Separator automatisch erkennen (komma oder semikolon)
-        df = pd.read_csv(path, sep=None, engine='python')
-        if "Model" not in df.columns:
-            df.insert(0, "Model", model_name)
+        df = pd.read_csv(path, sep=';')
+        df.insert(0, "Model", model_name)
         rows.append(df)
         print(f"✓ {model_name}: {path}")
     else:
@@ -39,6 +49,23 @@ for model_name, path in MODELS.items():
 if not rows:
     print("Keine Dateien gefunden. Abbruch.")
 else:
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    pd.concat(rows, ignore_index=True).to_excel(OUTPUT_FILE, index=False)
+    OUTPUT_FILE = get_output_path()
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    df_combined = pd.concat(rows, ignore_index=True)
+    df_combined.to_excel(OUTPUT_FILE, index=False)
+
+    from openpyxl import load_workbook
+    wb = load_workbook(OUTPUT_FILE)
+    ws = wb.active
+
+    for cell in ws[1]:
+        cell.alignment = Alignment(horizontal='left', vertical='center')
+
+    for col in ws.columns:
+        max_length = max(len(str(cell.value)) for cell in col)
+        col_letter = get_column_letter(col[0].column)
+        ws.column_dimensions[col_letter].width = max_length + 2
+
+    wb.save(OUTPUT_FILE)
     print(f"\n✓ Gespeichert: {OUTPUT_FILE.resolve()}")

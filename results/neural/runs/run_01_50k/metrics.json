@@ -1,6 +1,9 @@
 {
   "run": "run_01_50k",
-  "accuracy": 0.7314,
+  "accuracy": 0.7323666666666667,
+  "precision_macro": 0.5366880659762961,
+  "recall_macro": 0.43592734503103436,
+  "f1_macro": 0.44976332957483683,
   "num_train_samples": 140000,
   "num_val_samples": 30000,
   "num_test_samples": 30000,
