@@ -1,0 +1,36 @@
+{
+  "run": "run_02_250k",
+  "accuracy": 0.74932,
+  "precision_macro": 0.5470748136742001,
+  "recall_macro": 0.46760090935523235,
+  "f1_macro": 0.47955728184276286,
+  "num_train_samples": 700000,
+  "num_val_samples": 150000,
+  "num_test_samples": 150000,
+  "train_file": "train_0_250000_70_15_15.jsonl",
+  "val_file": "val_0_250000_70_15_15.jsonl",
+  "test_file": "test_0_250000_70_15_15.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "hidden_units": 256,
+    "dropout_rate": 0.3,
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "epochs_trained": 5,
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false
+  }
+}
