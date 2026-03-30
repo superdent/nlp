@@ -63,6 +63,7 @@
   "hyperparameters": {
     "C": 1.0,
     "max_iter": 2000,
+    "class_weight": "balanced",
     "max_features": 10000,
     "min_df": 2,
     "max_df": 0.95,
@@ -72,5 +73,45 @@
     ],
     "stop_words": "english",
     "sublinear_tf": false
-  }
+  },
+  "confusion_matrix": [
+    [
+      55150,
+      8900,
+      2887,
+      629,
+      4035
+    ],
+    [
+      12872,
+      12919,
+      7261,
+      1510,
+      4159
+    ],
+    [
+      8143,
+      11514,
+      23251,
+      8864,
+      12506
+    ],
+    [
+      4669,
+      5370,
+      15386,
+      33406,
+      58883
+    ],
+    [
+      11079,
+      8327,
+      14270,
+      39507,
+      524809
+    ]
+  ],
+  "vectorization_time_sec": 395.7849805355072,
+  "training_time_sec": 586.5237317085266,
+  "evaluation_time_sec": 1.4125266075134277
 }

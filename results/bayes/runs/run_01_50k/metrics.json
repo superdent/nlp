@@ -27,5 +27,45 @@
     "stop_words": "english",
     "sublinear_tf": false,
     "use_resampling": false
-  }
+  },
+  "confusion_matrix": [
+    [
+      1104,
+      10,
+      72,
+      58,
+      1356
+    ],
+    [
+      243,
+      15,
+      158,
+      74,
+      1144
+    ],
+    [
+      114,
+      4,
+      325,
+      254,
+      2462
+    ],
+    [
+      31,
+      0,
+      91,
+      484,
+      5539
+    ],
+    [
+      33,
+      1,
+      40,
+      333,
+      26055
+    ]
+  ],
+  "vectorization_time_sec": 50.676167249679565,
+  "training_time_sec": 0.08211946487426758,
+  "evaluation_time_sec": 0.1456139087677002
 }

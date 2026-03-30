@@ -4,6 +4,51 @@
   "precision_macro": 0.5336110492786232,
   "recall_macro": 0.43789578210977653,
   "f1_macro": 0.46084595342270995,
+  "classification_report": {
+    "1 Star": {
+      "precision": 0.6729915220024223,
+      "recall": 0.6411538461538462,
+      "f1-score": 0.656687019893638,
+      "support": 2600.0
+    },
+    "2 Stars": {
+      "precision": 0.3647469458987784,
+      "recall": 0.12790697674418605,
+      "f1-score": 0.1893973719981876,
+      "support": 1634.0
+    },
+    "3 Stars": {
+      "precision": 0.4296081277213353,
+      "recall": 0.28110161443494774,
+      "f1-score": 0.33983926521239954,
+      "support": 3159.0
+    },
+    "4 Stars": {
+      "precision": 0.41609278724175425,
+      "recall": 0.18681855166802278,
+      "f1-score": 0.2578616352201258,
+      "support": 6145.0
+    },
+    "5 Stars": {
+      "precision": 0.7846158635288258,
+      "recall": 0.9524979215478799,
+      "f1-score": 0.8604444747891988,
+      "support": 26462.0
+    },
+    "accuracy": 0.727925,
+    "macro avg": {
+      "precision": 0.5336110492786232,
+      "recall": 0.43789578210977653,
+      "f1-score": 0.46084595342270995,
+      "support": 40000.0
+    },
+    "weighted avg": {
+      "precision": 0.6755575425144242,
+      "recall": 0.727925,
+      "f1-score": 0.686101380916848,
+      "support": 40000.0
+    }
+  },
   "num_train_samples": 160000,
   "num_test_samples": 40000,
   "train_file": "train_0_50000_80_0_20.jsonl",
@@ -16,7 +61,7 @@
     "5 Stars"
   ],
   "hyperparameters": {
-    "C": 1.0,
+    "C": 1,
     "max_iter": 1000,
     "solver": "saga",
     "max_features": 10000,
@@ -28,5 +73,8 @@
     ],
     "stop_words": "english",
     "sublinear_tf": false
-  }
+  },
+  "vectorization_time_sec": 28.486250162124634,
+  "training_time_sec": 5.495212554931641,
+  "evaluation_time_sec": 0.06601166725158691
 }

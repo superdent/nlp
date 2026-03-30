@@ -1,9 +1,9 @@
 {
   "run": "run_02_250k",
-  "accuracy": 0.74932,
-  "precision_macro": 0.5470748136742001,
-  "recall_macro": 0.46760090935523235,
-  "f1_macro": 0.47955728184276286,
+  "accuracy": 0.74848,
+  "precision_macro": 0.5416273081199992,
+  "recall_macro": 0.46676775906013424,
+  "f1_macro": 0.47793645622612485,
   "num_train_samples": 700000,
   "num_val_samples": 150000,
   "num_test_samples": 150000,
@@ -32,5 +32,8 @@
     ],
     "stop_words": "english",
     "sublinear_tf": false
-  }
+  },
+  "vectorization_time_sec": 91.29603171348572,
+  "training_time_sec": 396.64332485198975,
+  "evaluation_time_sec": 12.343586683273315
 }

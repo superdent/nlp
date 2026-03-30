@@ -4,6 +4,51 @@
   "precision_macro": 0.5033466103993968,
   "recall_macro": 0.422478356333673,
   "f1_macro": 0.4388695881248961,
+  "classification_report": {
+    "1 Star": {
+      "precision": 0.6267525577870405,
+      "recall": 0.6361538461538462,
+      "f1-score": 0.6314182095819812,
+      "support": 2600.0
+    },
+    "2 Stars": {
+      "precision": 0.29360967184801384,
+      "recall": 0.10403916768665851,
+      "f1-score": 0.15363759602349752,
+      "support": 1634.0
+    },
+    "3 Stars": {
+      "precision": 0.4186170212765957,
+      "recall": 0.24912947135169358,
+      "f1-score": 0.3123635641992459,
+      "support": 3159.0
+    },
+    "4 Stars": {
+      "precision": 0.39629068887206664,
+      "recall": 0.17038242473555737,
+      "f1-score": 0.23830658927961762,
+      "support": 6145.0
+    },
+    "5 Stars": {
+      "precision": 0.7814631122132673,
+      "recall": 0.9526868717406092,
+      "f1-score": 0.8586219815401382,
+      "support": 26462.0
+    },
+    "accuracy": 0.7217,
+    "macro avg": {
+      "precision": 0.5033466103993968,
+      "recall": 0.422478356333673,
+      "f1-score": 0.4388695881248961,
+      "support": 40000.0
+    },
+    "weighted avg": {
+      "precision": 0.6636502295691263,
+      "recall": 0.7217,
+      "f1-score": 0.6766184135689839,
+      "support": 40000.0
+    }
+  },
   "num_train_samples": 160000,
   "num_test_samples": 40000,
   "train_file": "train_0_50000_80_0_20.jsonl",
@@ -18,6 +63,7 @@
   "hyperparameters": {
     "C": 1.0,
     "max_iter": 2000,
+    "class_weight": null,
     "max_features": 10000,
     "min_df": 2,
     "max_df": 0.95,
@@ -27,5 +73,45 @@
     ],
     "stop_words": "english",
     "sublinear_tf": false
-  }
+  },
+  "confusion_matrix": [
+    [
+      1654,
+      139,
+      168,
+      82,
+      557
+    ],
+    [
+      452,
+      170,
+      343,
+      146,
+      523
+    ],
+    [
+      282,
+      155,
+      787,
+      536,
+      1399
+    ],
+    [
+      107,
+      55,
+      365,
+      1047,
+      4571
+    ],
+    [
+      144,
+      60,
+      217,
+      831,
+      25210
+    ]
+  ],
+  "vectorization_time_sec": 26.538036584854126,
+  "training_time_sec": 25.817527770996094,
+  "evaluation_time_sec": 0.07040262222290039
 }
