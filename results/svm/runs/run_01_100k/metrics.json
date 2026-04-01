@@ -1,0 +1,117 @@
+{
+  "run": "run_01_100k",
+  "accuracy": 0.7369333333333333,
+  "precision_macro": 0.5254104424828269,
+  "recall_macro": 0.43649194293204696,
+  "f1_macro": 0.4501293127853245,
+  "classification_report": {
+    "1 Star": {
+      "precision": 0.6321162151550844,
+      "recall": 0.6944144921285313,
+      "f1-score": 0.661802486897544,
+      "support": 4637.0
+    },
+    "2 Stars": {
+      "precision": 0.3436385255648038,
+      "recall": 0.1037329504666188,
+      "f1-score": 0.15936035290874,
+      "support": 2786.0
+    },
+    "3 Stars": {
+      "precision": 0.4491587417702999,
+      "recall": 0.26397248495270853,
+      "f1-score": 0.3325209856485242,
+      "support": 4652.0
+    },
+    "4 Stars": {
+      "precision": 0.40923366834170855,
+      "recall": 0.1572721786360893,
+      "f1-score": 0.22722120498735723,
+      "support": 8285.0
+    },
+    "5 Stars": {
+      "precision": 0.7929050615822377,
+      "recall": 0.9630676084762866,
+      "f1-score": 0.8697415334844567,
+      "support": 39640.0
+    },
+    "accuracy": 0.7369333333333333,
+    "macro avg": {
+      "precision": 0.5254104424828269,
+      "recall": 0.43649194293204696,
+      "f1-score": 0.4501293127853245,
+      "support": 60000.0
+    },
+    "weighted avg": {
+      "precision": 0.6799873978657345,
+      "recall": 0.7369333333333333,
+      "f1-score": 0.6903120961804786,
+      "support": 60000.0
+    }
+  },
+  "num_train_samples": 240000,
+  "num_test_samples": 60000,
+  "train_file": "train_nobooks_100000_80_0_20.jsonl",
+  "test_file": "test_nobooks_100000_80_0_20.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 2000,
+    "class_weight": null,
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false
+  },
+  "confusion_matrix": [
+    [
+      3220,
+      196,
+      256,
+      123,
+      842
+    ],
+    [
+      913,
+      289,
+      491,
+      203,
+      890
+    ],
+    [
+      523,
+      232,
+      1228,
+      678,
+      1991
+    ],
+    [
+      204,
+      51,
+      479,
+      1303,
+      6248
+    ],
+    [
+      234,
+      73,
+      280,
+      877,
+      38176
+    ]
+  ],
+  "vectorization_time_sec": 26.690494298934937,
+  "training_time_sec": 31.81925082206726,
+  "evaluation_time_sec": 0.10199403762817383
+}

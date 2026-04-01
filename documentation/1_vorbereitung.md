@@ -17,4 +17,3 @@
 - Movies & TV
 - All Beauty
 - Office Products
-- Books

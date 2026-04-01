@@ -5,12 +5,11 @@ from datetime import datetime
 INPUT_FILES = {
     "Movies & TV": "data/raw/Movies_and_TV.jsonl",
     "All Beauty": "data/raw/All_Beauty.jsonl",
-    "Office Products": "data/raw/Office_Products.jsonl",
-    "Books": "data/raw/Books.jsonl"
+    "Office Products": "data/raw/Office_Products.jsonl"
 }
 
-N_RECORDS_PER_FILE = 31250000
-SPLIT_RATIOS = (0.7, 0.15, 0.15)
+N_RECORDS_PER_FILE = 30000000
+SPLIT_RATIOS = (0.8, 0.0, 0.2)
 OUTPUT_DIR = "data/splits"
 BUFFER_PERCENT = 1.01
 PROJECT_ROOT = Path(".")
@@ -76,9 +75,9 @@ def main():
     output_dir = PROJECT_ROOT / OUTPUT_DIR
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    train_path = output_dir / f"train_0_{N_RECORDS_PER_FILE}_{ratio_str}.jsonl"
-    val_path = output_dir / f"val_0_{N_RECORDS_PER_FILE}_{ratio_str}.jsonl"
-    test_path = output_dir / f"test_0_{N_RECORDS_PER_FILE}_{ratio_str}.jsonl"
+    train_path = output_dir / f"train_nobooks_{N_RECORDS_PER_FILE}_{ratio_str}.jsonl"
+    val_path = output_dir / f"val_nobooks_{N_RECORDS_PER_FILE}_{ratio_str}.jsonl"
+    test_path = output_dir / f"test_nobooks_{N_RECORDS_PER_FILE}_{ratio_str}.jsonl"
 
     total_train = 0
     total_val = 0

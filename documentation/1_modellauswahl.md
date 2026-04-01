@@ -4,8 +4,9 @@
 
 Naive Bayes ist ein Klassifikationsalgorithmus, der auf dem Satz von Bayes basiert.
 Der Algorithmus nimmt an, dass die verwendeten Features voneinander unabhängig sind.
-Bei der Sentimentanalyse würde es bedeuten, dass jedes einzelne Wort unabhängig von den anderen vorkommt. Diese Annahme ist in der Realität offensichtlich falsch, weil Wörter ihre Bedeutung erst im Kontext anderer Wörter bekommen.
-Trotz dieser unrealistischen (naiven) Annahme soll Naive Bayes bei Klassifikationsaufgaben mit Dokumenten erstaunlich gut funktionieren.
+Bei der Sentimentanalyse würde es bedeuten, dass jedes einzelne Wort unabhängig von den anderen vorkommt. Diese Annahme ist offensichtlich falsch,
+weil Wörter ihre Bedeutung erst im Kontext anderer Wörter bekommen.
+Trotz dieser unrealistischen (naiven) Annahme soll Naive Bayes bei Klassifikationsaufgaben mit Dokumenten ordentliche Ergebnisse liefern.
 
 ## Logistic Regression
 
@@ -18,7 +19,8 @@ Support Vector Machines sind ebenfalls ein Klassifikationsverfahren im überwach
 Das Modell sucht eine Trennlinie (bzw. allgemein eine Trennebene) im Feature-Raum, die die Datenpunkte zweier Klassen voneinander trennt.
 Dabei wird diejenige Trennlinie gewählt, die den größtmöglichen Abstand zu den nächstgelegenen Datenpunkten beider Klassen hat. Diese Punkte heißen Support-Vektoren und bestimmen die Lage der Grenze.
 Wenn die Daten nicht linear trennbar sind, können sie mithilfe des Kernel-Tricks so behandelt werden, als lägen sie in einem höherdimensionalen Raum, in dem eine Trennung möglich ist.
-Nachteil von SVM ist eine höhere Trainingszeit gegenüber Naive Bayes und Logistic Regression.
+Nachteil von SVM ist eine höhere Trainingszeit gegenüber Naive Bayes und Logistic Regression. Es ist schwer vorstellbar, dass der
+Algorithmus bei vielen Features / vielen Dimensionen seine Hyperebenen sinnvoll platzieren kann.
 
 ## Neuronales Netz
 
@@ -30,5 +32,5 @@ Während des Trainings werden die Gewichte so angepasst, dass das Modell möglic
 ## k-Nearest Neighbors
 k-Nearest Neighbors (kNN) ist ein Lazy Learner.
 Das Modell speichert die Trainingsdaten und berechnet für eine neue Beobachtung den Abstand zu den vorhandenen Datenpunkten.
-Anschließend werden die k nächstgelegenen Nachbarn bestimmt.
+Anschließend werden die k nächstgelegenen Nachbarn, also theoretisch ähnliche Rezensionen, bestimmt.
 Die neue Beobachtung wird der Klasse zugeordnet, die unter diesen Nachbarn am häufigsten vorkommt.

@@ -2,16 +2,17 @@
 
 ## EDA
 
-EDA-Report per `src/raw_data_analysis.py` erstellt: documentation/phase1_eda_report.md
+EDA-Report per `src/raw_data_analysis.py` erstellt: documentation/2_eda_result.md
 
-Analysiert wurden bis zu 5.000.000 Datensätze je Kategorie:
+Analysiert wurden alle Datensätze je Kategorie (kein Limit):
 
 | Kategorie       | Datensätze | Ø Textlänge (Zeichen) | Ø Wörter |
 |-----------------|------------|----------------------|----------|
-| Movies & TV     | 5.000.000  | 264                  | 47       |
+| Movies & TV     | 17.328.314 | 237                  | 42       |
 | All Beauty      | 701.528    | 173                  | 33       |
-| Office Products | 5.000.000  | 183                  | 34       |
-| Books           | 5.000.000  | 434                  | 77       |
+| Office Products | 12.845.712 | 175                  | 33       |
+
+Ungültige Ratings: 1 (Office Products). Keine JSON-Fehler, keine fehlenden Werte.
 
 ## Split-Script
 
@@ -22,21 +23,32 @@ Split-Script `src/split.py` lässt sich über folgende Parameter konfigurieren:
 - `INPUT_FILES`: Pfade zu den Rohdaten
 - `OUTPUT_DIR`: Ausgabeverzeichnis (`data/splits/`)
 
-Namenskonvetion der Splitdateien: `{split}_0_{n}_{ratio}.jsonl`, z. B. `train_0_50000_80_0_20.jsonl`.
+Namenskonvention der Splitdateien: `{split}_0_{n}_{ratio}.jsonl`, z. B. `train_0_100000_70_15_15.jsonl`.
+
+All Beauty enthält nur 701.528 valide Records. Bei N_RECORDS_PER_FILE > 701.528 wird die Kategorie vollständig verwendet.
 
 ## Erzeugte Splits
 
-### Naive Bayes: 80/0/20
+### 100.000 pro Kategorie
 
-| Split | Datensätze |
-|-------|------------|
-| Train | 160.000    |
-| Test  | 40.000     |
+| Split      | 70/15/15   | 80/0/20   |
+|------------|------------|-----------|
+| Train      | 210.000    | 240.000   |
+| Validation | 45.000     | —         |
+| Test       | 45.000     | 60.000    |
 
-### SVM / Logistic Regression / Neural Network: 70/15/15
+### 2.000.000 pro Kategorie (Beauty: 701.528)
 
-| Split      | Datensätze |
-|------------|------------|
-| Train      | 140.000    |
-| Validation | 30.000     |
-| Test       | 30.000     |
+| Split      | 70/15/15     | 80/0/20      |
+|------------|-------------|-------------|
+| Train      | 3.291.069   | 3.761.222   |
+| Validation | 705.229     | —           |
+| Test       | 705.230     | 940.306     |
+
+### 30.000.000 pro Kategorie (alle Datensätze)
+
+| Split      | 70/15/15      | 80/0/20       |
+|------------|--------------|--------------|
+| Train      | 21.612.885   | 24.700.442   |
+| Validation | 4.631.332    | —            |
+| Test       | 4.631.336    | 6.175.111    |

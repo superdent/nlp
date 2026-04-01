@@ -4,7 +4,7 @@
 - [x] GitHub Repository aufsetzen
 - [x] Pythonprojekt anlegen
 - [x] Daten herunterladen
-- [x] 3+ Kategorien auswählen (Movies & TV, All Beauty, Office Products, Books)
+- [x] 3 Kategorien auswählen (Movies & TV, All Beauty, Office Products)
 - [x] Dokumentation Setup
 
 ## 2. VORVERARBEITUNG
@@ -41,16 +41,16 @@
 ## 4. TUNING / EVALUIERUNG
 
 ### Tuning
-- [ ] Naive Bayes tunen
-- [ ] SVM tunen
-- [ ] Logistic Regression tunen
-- [ ] Neural Network tunen
+- [x] Naive Bayes tunen
+- [x] SVM tunen
+- [x] Logistic Regression tunen
+- [x] Neural Network tunen
 
 ### Evaluierung
-- [ ] Alle Modelle vergleichen (Accuracy, Precision, Recall, F1-Score)
-- [ ] Confusion Matrices visualisieren
-- [ ] Dokumentation
+- [x] Alle Modelle vergleichen (Accuracy, Precision, Recall, F1-Score)
+- [x] Confusion Matrices visualisieren
+- [x] Dokumentation
 
 ## 5. PROJEKTBERICHT
 - [x] Gliederung erstellen
-- [ ] Bericht schreiben
+- [] Bericht schreiben

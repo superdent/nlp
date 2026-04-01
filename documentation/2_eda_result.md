@@ -9,7 +9,6 @@ Amazon-Reviews aus 4 Produktkategorien (alle Records, kein Limit)
 | Movies & TV | 17,328,314 | 17,328,314 | 0 | 650 | 237 | 42 |
 | All Beauty | 701,528 | 701,528 | 0 | 107 | 173 | 33 |
 | Office Products | 12,845,712 | 12,845,711 | 1 | 679 | 175 | 33 |
-| Books | 29,475,453 | 29,475,449 | 4 | 967 | 423 | 75 |
 
 ---
 
@@ -136,47 +135,6 @@ Amazon-Reviews aus 4 Produktkategorien (alle Records, kein Limit)
 
 ---
 
-## Books
-
-### Statistiken
-- Records gesamt: 29,475,453
-- Valide Records: 29,475,449
-- Ungueltige Ratings: 4
-- JSON-Fehler: 0
-- Fehlende Werte: title=0, text=0, rating=0
-- Leere Texte: 967
-
-### Bewertungsverteilung
-- 1 Stern: 1,316,085 (4.5%)
-- 2 Stern: 1,080,897 (3.7%)
-- 3 Stern: 2,054,057 (7.0%)
-- 4 Stern: 4,632,932 (15.7%)
-- 5 Stern: 20,391,478 (69.2%)
-
-### Textlaenge
-- Mittelwert: 423 Zeichen / 75 Woerter
-- Min: 0 / Max: 37878
-
-### Textlaengen-Buckets
-| Bucket | Anzahl |
-|--------|--------|
-| 0 (leer) | 967 |
-| 1-10 | 1,116,644 |
-| 11-50 | 4,401,050 |
-| 51-100 | 3,592,472 |
-| 101-500 | 13,777,789 |
-| 501-1000 | 3,451,764 |
-| 1001-5000 | 3,025,744 |
-| 5001+ | 109,019 |
-
-### Bewertungsverteilung
-![Bewertungsverteilung](eda_figures/Books_rating.png)
-
-### Textlaengenverteilung
-![Textlaengen](eda_figures/Books_textlen.png)
-
----
-
 ## Split-Verteilung (70/15/15)
 
 | Kategorie | Split | Gesamt | 1 Stern | 2 Sterne | 3 Sterne | 4 Sterne | 5 Sterne |
@@ -190,6 +148,3 @@ Amazon-Reviews aus 4 Produktkategorien (alle Records, kein Limit)
 | Office Products | Train | 8,991,997 | 788,745 | 387,053 | 568,374 | 1,014,000 | 6,233,825 |
 | Office Products | Val | 1,926,856 | 251,295 | 97,316 | 117,044 | 200,183 | 1,261,018 |
 | Office Products | Test | 1,926,858 | 313,479 | 104,751 | 113,776 | 186,492 | 1,208,360 |
-| Books | Train | 20,632,814 | 838,284 | 769,677 | 1,545,458 | 3,416,487 | 14,062,908 |
-| Books | Val | 4,421,317 | 222,023 | 158,347 | 274,448 | 648,563 | 3,117,936 |
-| Books | Test | 4,421,318 | 255,778 | 152,873 | 234,151 | 567,882 | 3,210,634 |

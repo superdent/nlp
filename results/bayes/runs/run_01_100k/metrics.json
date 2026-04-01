@@ -1,0 +1,71 @@
+{
+  "run": "run_01_100k",
+  "accuracy": 0.7157333333333333,
+  "precision_macro": 0.559783938567942,
+  "recall_macro": 0.3534843521770613,
+  "f1_macro": 0.3663592408211973,
+  "num_train_samples": 240000,
+  "num_test_samples": 60000,
+  "train_file": "train_nobooks_100000_80_0_20.jsonl",
+  "test_file": "test_nobooks_100000_80_0_20.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "alpha": 1.0,
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false,
+    "use_resampling": false
+  },
+  "confusion_matrix": [
+    [
+      2551,
+      28,
+      133,
+      50,
+      1875
+    ],
+    [
+      616,
+      53,
+      307,
+      119,
+      1691
+    ],
+    [
+      282,
+      28,
+      660,
+      333,
+      3349
+    ],
+    [
+      94,
+      1,
+      172,
+      580,
+      7438
+    ],
+    [
+      98,
+      1,
+      90,
+      351,
+      39100
+    ]
+  ],
+  "vectorization_time_sec": 58.51301860809326,
+  "training_time_sec": 0.11178994178771973,
+  "evaluation_time_sec": 0.24884414672851562
+}
