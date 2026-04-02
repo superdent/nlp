@@ -1,0 +1,117 @@
+{
+  "run": "run_02_2000k",
+  "accuracy": 0.7480915786988491,
+  "precision_macro": 0.5577035960547236,
+  "recall_macro": 0.4704574700335419,
+  "f1_macro": 0.48608913130892395,
+  "classification_report": {
+    "1 Star": {
+      "precision": 0.6759013240542073,
+      "recall": 0.7507316169661048,
+      "f1-score": 0.7113539570365517,
+      "support": 80985.0
+    },
+    "2 Stars": {
+      "precision": 0.40679749891660993,
+      "recall": 0.1520536850630568,
+      "f1-score": 0.22136504514216412,
+      "support": 43215.0
+    },
+    "3 Stars": {
+      "precision": 0.42861962216224797,
+      "recall": 0.3058438708033021,
+      "f1-score": 0.35696991232346936,
+      "support": 70621.0
+    },
+    "4 Stars": {
+      "precision": 0.4716133987121167,
+      "recall": 0.1842244940345695,
+      "f1-score": 0.26495187520743446,
+      "support": 129999.0
+    },
+    "5 Stars": {
+      "precision": 0.805586136428436,
+      "recall": 0.9594336833006762,
+      "f1-score": 0.875804866835,
+      "support": 615486.0
+    },
+    "accuracy": 0.7480915786988491,
+    "macro avg": {
+      "precision": 0.5577035960547236,
+      "recall": 0.4704574700335419,
+      "f1-score": 0.48608913130892395,
+      "support": 940306.0
+    },
+    "weighted avg": {
+      "precision": 0.7016050391743754,
+      "recall": 0.7480915786988491,
+      "f1-score": 0.708146045977073,
+      "support": 940306.0
+    }
+  },
+  "num_train_samples": 3761222,
+  "num_test_samples": 940306,
+  "train_file": "train_nobooks_2000000_80_0_20.jsonl",
+  "test_file": "test_nobooks_2000000_80_0_20.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 1000,
+    "solver": "saga",
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false
+  },
+  "confusion_matrix": [
+    [
+      60798,
+      3671,
+      4034,
+      769,
+      11713
+    ],
+    [
+      14299,
+      6571,
+      9402,
+      1928,
+      11015
+    ],
+    [
+      7615,
+      4092,
+      21599,
+      9836,
+      27479
+    ],
+    [
+      2857,
+      942,
+      9947,
+      23949,
+      92304
+    ],
+    [
+      4382,
+      877,
+      5410,
+      14299,
+      590518
+    ]
+  ],
+  "vectorization_time_sec": 392.2921073436737,
+  "training_time_sec": 159.22088098526,
+  "evaluation_time_sec": 1.8666324615478516
+}
