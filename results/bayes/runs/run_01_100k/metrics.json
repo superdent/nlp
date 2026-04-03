@@ -1,9 +1,9 @@
 {
   "run": "run_01_100k",
   "accuracy": 0.7157333333333333,
-  "precision_macro": 0.559783938567942,
-  "recall_macro": 0.3534843521770613,
-  "f1_macro": 0.3663592408211973,
+  "precision_macro": 0.5597195927778539,
+  "recall_macro": 0.35346549992773835,
+  "f1_macro": 0.3663504966026364,
   "num_train_samples": 240000,
   "num_test_samples": 60000,
   "train_file": "train_nobooks_100000_80_0_20.jsonl",
@@ -46,26 +46,26 @@
     [
       282,
       28,
-      660,
-      333,
-      3349
+      659,
+      335,
+      3348
     ],
     [
       94,
       1,
-      172,
-      580,
+      171,
+      581,
       7438
     ],
     [
-      98,
+      97,
       1,
-      90,
+      91,
       351,
       39100
     ]
   ],
-  "vectorization_time_sec": 58.51301860809326,
-  "training_time_sec": 0.11178994178771973,
-  "evaluation_time_sec": 0.24884414672851562
+  "vectorization_time_sec": 13.493957042694092,
+  "training_time_sec": 0.032256126403808594,
+  "evaluation_time_sec": 0.08006620407104492
 }

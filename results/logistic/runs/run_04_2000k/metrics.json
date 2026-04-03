@@ -1,0 +1,117 @@
+{
+  "run": "run_04_2000k",
+  "accuracy": 0.748008626978877,
+  "precision_macro": 0.5561409039879266,
+  "recall_macro": 0.47128213121784146,
+  "f1_macro": 0.4866344154054582,
+  "classification_report": {
+    "1 Star": {
+      "precision": 0.6751862502359355,
+      "recall": 0.750904488485522,
+      "f1-score": 0.7110352407455043,
+      "support": 80985.0
+    },
+    "2 Stars": {
+      "precision": 0.40127883351260907,
+      "recall": 0.1553858613907208,
+      "f1-score": 0.22402375352382858,
+      "support": 43215.0
+    },
+    "3 Stars": {
+      "precision": 0.4264983854453808,
+      "recall": 0.30672179663272964,
+      "f1-score": 0.3568269238689059,
+      "support": 70621.0
+    },
+    "4 Stars": {
+      "precision": 0.4712840161116023,
+      "recall": 0.18450911160855082,
+      "f1-score": 0.2651939810054507,
+      "support": 129999.0
+    },
+    "5 Stars": {
+      "precision": 0.806457034634105,
+      "recall": 0.9588893979716842,
+      "f1-score": 0.8760921778836019,
+      "support": 615486.0
+    },
+    "accuracy": 0.748008626978877,
+    "macro avg": {
+      "precision": 0.5561409039879266,
+      "recall": 0.47128213121784146,
+      "f1-score": 0.4866344154054582,
+      "support": 940306.0
+    },
+    "weighted avg": {
+      "precision": 0.7016550261015476,
+      "recall": 0.748008626978877,
+      "f1-score": 0.7084515808730851,
+      "support": 940306.0
+    }
+  },
+  "num_train_samples": 3761222,
+  "num_test_samples": 940306,
+  "train_file": "train_nobooks_2000000_80_0_20.jsonl",
+  "test_file": "test_nobooks_2000000_80_0_20.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "C": 2.0,
+    "max_iter": 1000,
+    "solver": "saga",
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false
+  },
+  "confusion_matrix": [
+    [
+      60812,
+      3816,
+      4053,
+      759,
+      11545
+    ],
+    [
+      14313,
+      6715,
+      9429,
+      1911,
+      10847
+    ],
+    [
+      7627,
+      4257,
+      21661,
+      9853,
+      27223
+    ],
+    [
+      2873,
+      1010,
+      10106,
+      23986,
+      92024
+    ],
+    [
+      4442,
+      936,
+      5539,
+      14386,
+      590183
+    ]
+  ],
+  "vectorization_time_sec": 161.4649260044098,
+  "training_time_sec": 80.50651216506958,
+  "evaluation_time_sec": 1.1629719734191895
+}

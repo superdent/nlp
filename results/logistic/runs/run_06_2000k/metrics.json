@@ -1,0 +1,119 @@
+{
+  "run": "run_06_2000k",
+  "accuracy": 0.5943246134768895,
+  "precision_macro": 0.4898118397861181,
+  "recall_macro": 0.5017253217353483,
+  "f1_macro": 0.4387500960259635,
+  "classification_report": {
+    "1 Star": {
+      "precision": 0.7289120745959046,
+      "recall": 0.4382293017225412,
+      "f1-score": 0.5473726421641963,
+      "support": 80985.0
+    },
+    "2 Stars": {
+      "precision": 0.15872697079988046,
+      "recall": 0.7498090940645609,
+      "f1-score": 0.26199273926859046,
+      "support": 43215.0
+    },
+    "3 Stars": {
+      "precision": 0.33323716099249856,
+      "recall": 0.1799039945625239,
+      "f1-score": 0.23366161825153797,
+      "support": 70621.0
+    },
+    "4 Stars": {
+      "precision": 0.30688172043010753,
+      "recall": 0.46103431564858194,
+      "f1-score": 0.36848560862468066,
+      "support": 129999.0
+    },
+    "5 Stars": {
+      "precision": 0.9213012721121996,
+      "recall": 0.6796499026785338,
+      "f1-score": 0.7822378718208117,
+      "support": 615486.0
+    },
+    "accuracy": 0.5943246134768895,
+    "macro avg": {
+      "precision": 0.4898118397861181,
+      "recall": 0.5017253217353483,
+      "f1-score": 0.4387500960259635,
+      "support": 940306.0
+    },
+    "weighted avg": {
+      "precision": 0.7405740508857331,
+      "recall": 0.5943246134768895,
+      "f1-score": 0.6396977432950608,
+      "support": 940306.0
+    }
+  },
+  "num_train_samples": 3761222,
+  "num_test_samples": 940306,
+  "train_file": "train_nobooks_2000000_80_0_20.jsonl",
+  "test_file": "test_nobooks_2000000_80_0_20.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 1000,
+    "solver": "saga",
+    "class_weight": "balanced",
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false
+  },
+  "confusion_matrix": [
+    [
+      35490,
+      41786,
+      1359,
+      1245,
+      1105
+    ],
+    [
+      4441,
+      32403,
+      3086,
+      2232,
+      1053
+    ],
+    [
+      2447,
+      37527,
+      12705,
+      14116,
+      3826
+    ],
+    [
+      1470,
+      28578,
+      10268,
+      59934,
+      29749
+    ],
+    [
+      4841,
+      63849,
+      10708,
+      117773,
+      418315
+    ]
+  ],
+  "n_iter": 1000,
+  "vectorization_time_sec": 162.04216027259827,
+  "training_time_sec": 3202.5439550876617,
+  "evaluation_time_sec": 1.175889015197754
+}

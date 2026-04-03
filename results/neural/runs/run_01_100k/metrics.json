@@ -1,9 +1,9 @@
 {
   "run": "run_01_100k",
-  "accuracy": 0.7437333333333334,
-  "precision_macro": 0.5342175442062771,
-  "recall_macro": 0.4446743859713756,
-  "f1_macro": 0.45284794897181213,
+  "accuracy": 0.7440444444444444,
+  "precision_macro": 0.526740381509179,
+  "recall_macro": 0.45121543164855515,
+  "f1_macro": 0.4479145347863408,
   "num_train_samples": 210000,
   "num_val_samples": 45000,
   "num_test_samples": 45000,
@@ -20,9 +20,9 @@
   "hyperparameters": {
     "hidden_units": 256,
     "dropout_rate": 0.3,
-    "learning_rate": 0.001,
+    "learning_rate": 0.0001,
     "batch_size": 128,
-    "epochs_trained": 4,
+    "epochs_trained": 6,
     "max_features": 10000,
     "min_df": 2,
     "max_df": 0.95,
@@ -35,42 +35,42 @@
   },
   "confusion_matrix": [
     [
-      2459,
-      109,
-      257,
-      26,
-      617
+      2572,
+      51,
+      294,
+      31,
+      520
     ],
     [
-      704,
-      172,
-      472,
-      88,
-      617
+      795,
+      72,
+      548,
+      107,
+      531
     ],
     [
-      424,
-      140,
-      1119,
-      430,
-      1387
+      464,
+      65,
+      1226,
+      483,
+      1262
     ],
     [
-      139,
-      28,
-      493,
-      891,
-      4545
+      158,
+      7,
+      513,
+      1058,
+      4360
     ],
     [
-      168,
-      14,
-      300,
-      574,
-      28827
+      235,
+      6,
+      350,
+      738,
+      28554
     ]
   ],
-  "vectorization_time_sec": 27.89784002304077,
-  "training_time_sec": 118.76419353485107,
-  "evaluation_time_sec": 4.79707932472229
+  "vectorization_time_sec": 12.607550144195557,
+  "training_time_sec": 98.74361395835876,
+  "evaluation_time_sec": 1.787339687347412
 }
