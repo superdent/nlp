@@ -1,0 +1,119 @@
+{
+  "run": "run_07_30000k",
+  "accuracy": 0.7697285490530374,
+  "precision_macro": 0.5679135700770317,
+  "recall_macro": 0.46371277090680857,
+  "f1_macro": 0.4816032500823241,
+  "classification_report": {
+    "1 Star": {
+      "precision": 0.7438788347432014,
+      "recall": 0.7970920247444684,
+      "f1-score": 0.7695666441702217,
+      "support": 779649.0
+    },
+    "2 Stars": {
+      "precision": 0.43152427940794597,
+      "recall": 0.14660578236213692,
+      "f1-score": 0.21885716994948032,
+      "support": 283379.0
+    },
+    "3 Stars": {
+      "precision": 0.39728039636334966,
+      "recall": 0.2649800450577614,
+      "f1-score": 0.3179153418948871,
+      "support": 361314.0
+    },
+    "4 Stars": {
+      "precision": 0.451662104028158,
+      "recall": 0.14279846019843767,
+      "f1-score": 0.21699220054779877,
+      "support": 727886.0
+    },
+    "5 Stars": {
+      "precision": 0.8152222358425034,
+      "recall": 0.9670875421712384,
+      "f1-score": 0.8846848938492327,
+      "support": 4022884.0
+    },
+    "accuracy": 0.7697285490530374,
+    "macro avg": {
+      "precision": 0.5679135700770317,
+      "recall": 0.46371277090680857,
+      "f1-score": 0.4816032500823241,
+      "support": 6175112.0
+    },
+    "weighted avg": {
+      "precision": 0.7212978952936152,
+      "recall": 0.7697285490530374,
+      "f1-score": 0.7277291397728338,
+      "support": 6175112.0
+    }
+  },
+  "num_train_samples": 24700441,
+  "num_test_samples": 6175112,
+  "train_file": "train_nobooks_30000000_80_0_20.jsonl",
+  "test_file": "test_nobooks_30000000_80_0_20.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 1000,
+    "solver": "saga",
+    "class_weight": null,
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false
+  },
+  "confusion_matrix": [
+    [
+      621452,
+      24531,
+      26203,
+      5432,
+      102031
+    ],
+    [
+      105865,
+      41545,
+      51845,
+      9813,
+      74311
+    ],
+    [
+      52613,
+      20227,
+      95741,
+      42635,
+      150098
+    ],
+    [
+      21060,
+      4948,
+      42563,
+      103941,
+      555374
+    ],
+    [
+      34431,
+      5024,
+      24639,
+      68309,
+      3890481
+    ]
+  ],
+  "n_iter": 22,
+  "vectorization_time_sec": 1174.4013438224792,
+  "training_time_sec": 480.9660029411316,
+  "evaluation_time_sec": 7.374502182006836
+}

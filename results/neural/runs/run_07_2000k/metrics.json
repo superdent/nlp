@@ -1,0 +1,76 @@
+{
+  "run": "run_07_2000k",
+  "accuracy": 0.653944103342172,
+  "precision_macro": 0.4817225591377431,
+  "recall_macro": 0.5518751721183186,
+  "f1_macro": 0.5054109538262699,
+  "num_train_samples": 3291069,
+  "num_val_samples": 705229,
+  "num_test_samples": 705230,
+  "train_file": "train_nobooks_2000000_70_15_15.jsonl",
+  "val_file": "val_nobooks_2000000_70_15_15.jsonl",
+  "test_file": "test_nobooks_2000000_70_15_15.jsonl",
+  "classes": [
+    "1 Star",
+    "2 Stars",
+    "3 Stars",
+    "4 Stars",
+    "5 Stars"
+  ],
+  "hyperparameters": {
+    "hidden_units": 256,
+    "dropout_rate": 0.3,
+    "learning_rate": 0.0001,
+    "batch_size": 128,
+    "epochs_trained": 4,
+    "max_features": 10000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "sublinear_tf": false
+  },
+  "confusion_matrix": [
+    [
+      47591,
+      10489,
+      2572,
+      1021,
+      1175
+    ],
+    [
+      9595,
+      13685,
+      6617,
+      1860,
+      1176
+    ],
+    [
+      5506,
+      11856,
+      21157,
+      10356,
+      3707
+    ],
+    [
+      3279,
+      5734,
+      17192,
+      43684,
+      25435
+    ],
+    [
+      11018,
+      11983,
+      21137,
+      82341,
+      335064
+    ]
+  ],
+  "vectorization_time_sec": 151.3690299987793,
+  "training_time_sec": 1086.010500907898,
+  "evaluation_time_sec": 27.638044834136963
+}
