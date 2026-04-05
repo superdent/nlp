@@ -13,14 +13,18 @@ RUNS = {
     "Neural Network": PROJECT_ROOT / "results" / "neural" / "runs" / "run_08_30000k",
 }
 
+STYLES = ["-", "--", "-.", ":"]
 CLASSES = [1, 2, 3, 4, 5]
 OUTPUT_PATH = PROJECT_ROOT / "documentation" / "roc_comparison.png"
 
 plt.figure(figsize=(8, 6))
 
-for name, run_dir in RUNS.items():
+for (name, run_dir), style in zip(RUNS.items(), STYLES):
     y_test = np.load(run_dir / "y_test.npy")
     y_proba = np.load(run_dir / "y_proba.npy")
+
+    if y_test.min() == 0:
+        y_test = y_test + 1
 
     y_bin = label_binarize(y_test, classes=CLASSES)
 
@@ -38,9 +42,9 @@ for name, run_dir in RUNS.items():
     mean_tpr /= len(CLASSES)
     macro_auc = auc(all_fpr, mean_tpr)
 
-    plt.plot(all_fpr, mean_tpr, label=f"{name} (AUC = {macro_auc:.4f})")
+    plt.plot(all_fpr, mean_tpr, style, linewidth=1.5, label=f"{name} (AUC = {macro_auc:.4f})")
 
-plt.plot([0, 1], [0, 1], "k--", label="Zufall")
+plt.plot([0, 1], [0, 1], "k--", linewidth=0.8, label="Zufall")
 plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
 plt.title("ROC-Kurven (Macro-Average)")
