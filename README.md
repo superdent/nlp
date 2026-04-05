@@ -44,6 +44,7 @@ documentation/         # EDA-Report, Diagramme
 | export_results.py | Metriken aller Runs in overview.csv zusammenfassen |
 | create_appendix_a.py | Excel-Export für Anhang A des Projektberichts |
 | three_three_matrix.py | 3-Klassen-Konfusionsmatrix aus 5-Klassen-Ergebnissen ableiten |
+| create_roc.py | Erzeugt ein ROC-Diagramm für alle vier Modelle |
 
 ## Notebooks
 
