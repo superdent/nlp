@@ -53,4 +53,4 @@
 
 ## 5. PROJEKTBERICHT
 - [x] Gliederung erstellen
-- [] Bericht schreiben
+- [x] Bericht schreiben
